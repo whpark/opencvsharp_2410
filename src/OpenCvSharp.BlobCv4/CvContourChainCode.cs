@@ -115,16 +115,16 @@ namespace OpenCvSharp.BlobCv4
         /// Draw a contour.
         /// </summary>
         /// <param name="img">Image to draw on.</param>
-        public void Render(Mat img, CvRect roi)
+        public void Render(Mat img)
         {
-            Render(img, roi, new CvScalar(255, 255, 255));
+            Render(img, new CvScalar(255, 255, 255));
         }
         /// <summary>
         /// Draw a contour.
         /// </summary>
         /// <param name="img">Image to draw on.</param>
         /// <param name="color">Color to draw (default, white).</param>
-        public void Render(Mat img, CvRect roi, CvScalar color)
+        public void Render(Mat img, CvScalar color)
         {
             if (img == null)
                 throw new ArgumentNullException(nameof(img));
@@ -132,7 +132,7 @@ namespace OpenCvSharp.BlobCv4
                 throw new ArgumentException("Invalid img format (U8 3-channels)");
 
             int step = (int)img.Step();
-            //CvRect roi = img.ROI;
+            CvRect roi = new CvRect(0, 0, img.Cols, img.Rows);
             int width = roi.Width;
             int height = roi.Height;
             int offset = (3 * roi.X) + (roi.Y * step);

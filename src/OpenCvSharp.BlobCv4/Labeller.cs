@@ -92,7 +92,7 @@ namespace OpenCvSharp.BlobCv4
         /// <param name="img"></param>
         /// <param name="blobs"></param>
         /// <returns></returns>
-        public static int Perform(Mat img, CvRect roi, CvBlobs blobs)
+        public static int Perform(Mat img, CvBlobs blobs)
         {
             if (img == null)
                 throw new ArgumentNullException(nameof(img));
@@ -112,7 +112,7 @@ namespace OpenCvSharp.BlobCv4
             blobs.Clear();
 
             int step = (int)img.Step();
-            //CvRect roi = img.ROI;
+            CvRect roi = new CvRect(0, 0, img.Cols, img.Rows);
             int w = roi.Width;
             int h = roi.Height;
             int offset = roi.X + roi.Y * step;

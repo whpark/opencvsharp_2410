@@ -296,13 +296,13 @@ namespace OpenCvSharp.BlobCv4
         /// </summary>
         /// <param name="img">Input binary image (depth=IPL_DEPTH_8U and num. channels=1).</param>
         /// <returns>Number of pixels that has been labeled.</returns>
-        public int Label(Mat img, CvRect roi)
+        public int Label(Mat img)
         {
             if (img == null)
                 throw new ArgumentNullException(nameof(img));
 
-            Labels = new LabelData(img.Height, img.Width, roi);
-            return Labeller.Perform(img, roi, this);
+            Labels = new LabelData(img.Height, img.Width);
+            return Labeller.Perform(img, this);
         }
 
         #endregion

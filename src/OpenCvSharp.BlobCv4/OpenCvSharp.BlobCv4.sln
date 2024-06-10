@@ -5,8 +5,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCvSharp.BlobCv4", "OpenCvSharp.BlobCv4.csproj", "{383AE960-7F56-47A4-BFF2-B2B81B6A49B5}"
 EndProject
 Global
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {25D5E50D-54BF-4537-853F-ADF6A4CC0D2E}
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release JP|Any CPU = Release JP|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{383AE960-7F56-47A4-BFF2-B2B81B6A49B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -16,12 +18,10 @@ Global
 		{383AE960-7F56-47A4-BFF2-B2B81B6A49B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{383AE960-7F56-47A4-BFF2-B2B81B6A49B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release JP|Any CPU = Release JP|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25D5E50D-54BF-4537-853F-ADF6A4CC0D2E}
 	EndGlobalSection
 EndGlobal

@@ -370,11 +370,11 @@ namespace OpenCvSharp.BlobCv4
         /// <param name="contour"> Chain code contour.</param>
         /// <param name="img">Image to draw on.</param>
         /// <param name="color">Color to draw (default, white).</param>
-        public static void RenderContourChainCode(CvContourChainCode contour, Mat img, CvRect roi, CvScalar color)
+        public static void RenderContourChainCode(CvContourChainCode contour, Mat img, CvScalar color)
         {
             if (contour == null)
                 throw new ArgumentNullException(nameof(contour));
-            contour.Render(img, roi, color);
+            contour.Render(img, color);
         }
         #endregion
         #region RenderContourPolygon
